@@ -1,28 +1,28 @@
 function hello(event)
 {
     event.preventDefault();
-    let mobileRegex = /^(91)( )[6-9]{1}[0-9]{9}$/;
-    let mobile = document.getElementById('mobile').value;
+    let passwrdRegex = /^[A-Za-z0-9]{8,}$/;
+    let passwrd = document.getElementById('passwrd').value;
 
-    if(mobileRegex.test(mobile))
+    if(passwrdRegex.test(passwrd))
      {
-        localStorage.setItem("mobile",mobile);
-        alert("Hello, "+ localStorage.getItem("mobile"));
+        localStorage.setItem("passwrd",passwrd);
+        alert("Password Saved Succesfully ");
      }else
      {
-        alert("Enter valid mobile Number");
-        document.getElementById("name-err").innerHTML ="enter a valid Mobile Number ! ";
+        alert("Enter valid Password");
+        document.getElementById("name-err").innerHTML ="enter a valid Password Atlead 8 Elements ! ";
      }
 }
 
 function check(event)
 {
     event.preventDefault();
-    let  mobileRegex = /^(91)( )[6-9]{1}[0-9]{9}$$/;
-    let  mobile = document.getElementById(' mobile').value;
+    let  passwrdRegex = /^[A-Za-z0-9]{8,}$/;
+    let  passwrd = document.getElementById(' passwrd').value;
 
-    if(! mobileRegex.test( mobile))
-    document.getElementById("name-err").innerHTML ="Enter Valid Mobile Number !"
+    if(!passwrdRegex.test( passwrd))
+    document.getElementById("name-err").innerHTML ="enter a valid Password Atlead 8 Elements ! ";
    else
    document.getElementById("name-err").innerHTML =""
 }
