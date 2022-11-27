@@ -1,29 +1,27 @@
 function hello(event)
 {
     event.preventDefault();
-    let firstNameRegex = /^[A-Z]{1}[a-z]{2,}$/;
-    let name = document.getElementById('name').value;
+    let emailRegex = /^[a-zA-Z]+[.+-]?[A-Za-z0-9]*[@][A-Za-z0-9]+[.+-][A-Za-z0-9]{2,}[.]*[A-Za-z]*$/;
+    let email = document.getElementById('email').value;
 
-    if(firstNameRegex.test(name))
+    if(emailRegex.test(email))
      {
-        localStorage.setItem("name",name);
-        alert("Hello, "+ localStorage.getItem("name"));
+        localStorage.setItem("email",email);
+        alert("Hello, "+ localStorage.getItem("email"));
      }else
      {
-        alert("Enter valid name");
-        document.getElementById("name-err").innerHTML ="Min 3 chars & first letter capital!"
+        alert("Enter valid email");
+        document.getElementById("name-err").innerHTML ="enter a valid email ! ";
      }
-
-    
 }
 
 function check(event)
 {
     event.preventDefault();
-    let firstNameRegex = /^[A-Z]{1}[a-z]{2,}$/;
-    let name = document.getElementById('name').value;
+    let emailRegex = /^[a-zA-Z]+[.+-]?[A-Za-z0-9]*[@][A-Za-z0-9]+[.+-][A-Za-z0-9]{2,}[.]*[A-Za-z]*$/;
+    let email = document.getElementById('name').value;
 
-    if(!firstNameRegex.test(name))
+    if(!firstNameRegex.test(email))
     document.getElementById("name-err").innerHTML ="Min 3 chars & first letter capital!"
    else
    document.getElementById("name-err").innerHTML =""
