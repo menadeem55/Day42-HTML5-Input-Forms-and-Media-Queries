@@ -1,7 +1,7 @@
 function hello(event)
 {
     event.preventDefault();
-    let passwrdRegex = /^[A-Za-z0-9]{8,}$/;
+    let passwrdRegex = /^((?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*_]).{8,})$/;
     let passwrd = document.getElementById('passwrd').value;
 
     if(passwrdRegex.test(passwrd))
@@ -18,7 +18,7 @@ function hello(event)
 function check(event)
 {
     event.preventDefault();
-    let  passwrdRegex = /^[A-Za-z0-9]{8,}$/;
+    let  passwrdRegex = /^((?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*_]).{8,})$/;
     let  passwrd = document.getElementById(' passwrd').value;
 
     if(!passwrdRegex.test( passwrd))
